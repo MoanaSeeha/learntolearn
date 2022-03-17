@@ -1,0 +1,45 @@
+{
+  "nft_address" : "234234",
+  "slug" : "basic_math1",
+  "img" : "https://place-hold.it/17x13",
+  "icon" : "react",
+  "icon_library" : "fab",
+  "link" : "/basic-math",
+  "date" : "2021-12-09",
+  "title" : "Basic Math",
+  "seller_thumb" : "/img/avatar_1.jpg",
+  "seller" : "@Richard",
+  "level" : "1",
+  "price" : "FREE",
+  "learn" : "10 LEARN",
+  "btnText" : "TAKE TEST",
+  "cost_amount" : "1",
+  "group" : [
+    "math"
+  ],
+  "id" : "f",
+  "row" : 1,
+  "col" : 2,
+  "w" : 1,
+  "h" : 1,
+  "filter" : [
+    "math",
+    "chart"
+  ],
+  "cost_token" : "LTS",
+  "nft" : {
+    "attributes" : [
+      {
+        "trait_type" : "Level",
+        "value" : "1"
+      },
+      {
+        "trait_type" : "Type",
+        "value" : "Multiple Choice"
+      }
+    ],
+    "description" : "Basic math test",
+    "image" : "https://gateway.pinata.cloud/ipfs/QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
+    "name" : "Math 101"
+  }
+}

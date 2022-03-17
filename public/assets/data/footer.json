@@ -1,0 +1,82 @@
+{
+  "img": "/img/logo.png",
+  "content": "Start getting paid for learning today. Join our community on social media to learn more.",
+  "widget_1": "Useful Links",
+  "widget_2": "Community",
+  "widget_3": "Subscribe",
+  "socialData": [
+    {
+      "id": 1,
+      "link": "facebook",
+      "library": "fab",
+      "icon": "facebook-f"
+    },
+    {
+      "id": 2,
+      "link": "twitter",
+      "library": "fab",
+      "icon": "twitter"
+    },
+    {
+      "id": 3,
+      "link": "linkedin",
+      "library": "fab",
+      "icon": "linkedin"
+    },
+    {
+      "id": 4,
+      "link": "discord",
+      "library": "fab",
+      "icon": "discord"
+    }
+  ],
+  "widgetData_1": [
+    {
+      "id": 1,
+      "text": "White Paper",
+      "link": "https://docs.google.com/document/d/1JfwA98byEpPX5vL8Cd5rNpVEDHAPyBrGFOiQGj-vGjQ/edit?usp=sharing"
+    },
+    {
+      "id": 2,
+      "text": "Help",
+      "link": "/help"
+    },
+    {
+      "id": 3,
+      "text": "Sample Test",
+      "link": "/testnet"
+    },
+    {
+      "id": 4,
+      "text": "Terms and Conditions",
+      "link": "/terms"
+    },
+    {
+      "id": 5,
+      "text": "Submit a Question",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLScQFfvcxwOsx31Jp3gSzS12GASDR4emg7lzmfPh2yCDQx0ydQ/viewform?usp=sf_link"
+    }
+  ],
+  "widgetData_2": [
+    {
+      "id": 1,
+      "text": "Help Center"
+    },
+    {
+      "id": 2,
+      "text": "Partners"
+    },
+    {
+      "id": 3,
+      "text": "Suggestions"
+    },
+    {
+      "id": 4,
+      "text": "Blog"
+    },
+    {
+      "id": 5,
+      "text": "Newsletter"
+    }
+  ]
+}

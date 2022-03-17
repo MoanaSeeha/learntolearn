@@ -1,0 +1,43 @@
+{
+  "preHeading": "How It Works",
+  "heading": "Answer Questions and Earn Crypto",
+  "workData": [
+    {
+      "id": 1,
+      "icon": "wallet",
+      "library": "fad",
+      "title": "Setup Your Wallet",
+      "text": "Set up Metamask to work with the Rinkeby testnet until we go live.",
+      "text2": "We use Polygon as of now so you will need to send to setup Polygon with Metamask",
+      "link": "https://gist.github.com/tschubotz/8047d13a2d2ac8b2a9faa3a74970c7ef",
+      "target": "_blank"
+    },
+    {
+      "id": 2,
+      "icon": "file",
+      "library": "fad",
+      "title": "Take a Test",
+      "text": "Play educational games or take math and programming quizzes to test your skill.",
+      "link": "/tests",
+      "target": "_self"
+    },
+    {
+      "id": 3,
+      "icon": "coins",
+      "library": "fad",
+      "title": "Earn LEARN Tokens",
+      "text": "Claim Learn tokens every two weeks.  The more you learn, the more you earn! ",
+      "link": "/testnet",
+      "target": "_self"
+    },
+    {
+      "id": 4,
+      "icon": "users",
+      "library": "fa",
+      "title": "Compete with Others",
+      "text": "Compare your skills with other learners and see how you stack up in our leaderboards",
+      "link": "/leaderboard",
+      "target": "_self"
+    }
+  ]
+}

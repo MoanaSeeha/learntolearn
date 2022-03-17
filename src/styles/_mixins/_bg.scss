@@ -1,0 +1,91 @@
+
+//
+//// Usage example 01
+//.bg-variant-01 {
+//  @include _bg-img-variant('http://lorempixel.com/output/people-q-g-640-480-1.jpg');
+//}
+//
+//// Usage example 02
+//.bg-variant-02 {
+//  @include _bg-img-variant('fashion-q-c-640-480-3.jpg' 'fashion-q-g-640-480-8.jpg', 'http://lorempixel.com/output/', transparent, scroll fixed, no-repeat no-repeat, (50% 50%) center, (150px auto, cover) );
+//}
+
+/*
+
+.bg-variant-02 {
+  @include _bg-img-variant('fashion-q-c-640-480-3.jpg' 'fashion-q-g-640-480-8.jpg', 'http://lorempixel.com/output/', transparent, scroll fixed, no-repeat no-repeat, (50% 50%) center, (150px auto, cover) );
+}
+
+ */
+
+
+@mixin _prefix($declarations, $property-prefixes: webkit moz ms o) {
+  @each $property, $value in $declarations {
+    @each $property-prefix in $property-prefixes {
+      -#{$property-prefix}-#{$property}: #{$value};
+    }
+    #{$property}: #{$value};
+  }
+}
+
+// == Background image(s) variations
+// Prepared for cover image by default. Multiple images are supported.
+// @param $img (string|list) - image or space separated sass list of images
+// @param $path (string|null) [null] - path to images location ending with slash (may be part of URL), null is used in case if there is a need to specify paths or URLs for particular images separately (in that case path for each images should be included in `$img` as part of the name of each image)
+// @param $bg-color (string|null) [null] - background color
+// @param $attachment (string|list) [fixed] - attachment type or space separated sass list of types (scroll|fixed|local)
+// @param $repeat (string|list) [no-repeat] - background repeat type or space separated sass list of types (repeat|repeat-x|repeat-y|no-repeat)
+// @param $position (string|list) [center] - background position or space separated sass list of positions (x% y%|xpos ypos|left|top|right|bottom|left top|left center|left bottom|right top|right center|right bottom|center top|center center|center bottom), pairs of values used for particular background images should be wrapper in brackets as it should be treated as nested sass list
+// @param $size (string|list) [cover] - size(s) for background image(s)
+// Usage examples:
+
+@mixin _bg-img-variant($img, $path: null, $bg-color: null, $attachment: fixed, $repeat: no-repeat, $position: center, $size: cover) {
+
+  // Process background images.
+  $images: (); // Initiate empty list with background images URLs.
+  @each $i in $img { // Join each image with path and wrap in `url('')`.
+    $images: append($images, url('#{$path}#{$i}'), comma); // Append images URLs to the list.
+  }
+
+  // Process background attachment.
+  $attachments: (); // Initiate empty list with background attachment types.
+  @each $a in $attachment {
+    $attachments: append($attachments, $a, comma); // Append attachment types to the list.
+  }
+
+  // Process background repeat.
+  $repetitions: (); // Initiate empty list with background repeat types.
+  @each $r in $repeat {
+    $repetitions: append($repetitions, $r, comma); // Append repeat types to the list.
+  }
+
+  // Process background position.
+  $positions: (); // Initiate empty list with background images posistions.
+  @each $p in $position {
+    $positions: append($positions, $p, comma); // Append positions to the list.
+  }
+
+  background-attachment: $attachments;
+  background-color: $bg-color;
+  background-image: $images;
+  background-position: $positions;
+  background-repeat: $repetitions;
+  @include _prefix((background-size: $size), (webkit moz ms));
+}
+
+// Usage and styling
+.container-fluid {
+  margin-bottom: 15px;
+}
+
+[class*="bg-variant"] {
+  background-color: #494949;
+  @include _prefix((box-shadow: 1px 1px 5px 1px rgba(#000,.3)), (webkit moz));
+  color: #fff;
+  text-align: center;
+  margin: 15px auto 0;
+  min-height: 150px;
+  padding: 15px;
+  text-shadow: 0 1px 1px rgba(#000,.8);
+  text-transform: uppercase;
+}

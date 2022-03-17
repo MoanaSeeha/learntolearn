@@ -1,0 +1,16 @@
+{
+  "title" : "Basic Math",
+  "slug" : "javascript_101",
+  "img" : "https://via.placeholder.com/200x100",
+  "icon" : "react",
+  "icon_library" : "fab",
+  "link" : "/basic-math",
+  "date" : "2021-12-09",
+  "level" : "1",
+  "learn" : "50 LEARN",
+  "group" : ["javascript","programming"],
+  "btn_text" : "TAKE TEST",
+  "cost_amount" : "1",
+  "cost_token" : "LTS",
+  "can_take" : 50
+}
